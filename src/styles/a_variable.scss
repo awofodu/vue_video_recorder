@@ -1,0 +1,64 @@
+// Reversed input variant
+.v-input--reverse .v-input__slot {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    .v-application--is-ltr & {
+      .v-input--selection-controls__input {
+        margin-right: 0;
+        margin-left: 8px;
+      }
+    }
+    .v-application--is-rtl & {
+      .v-input--selection-controls__input {
+        margin-left: 0;
+        margin-right: 8px;
+      }
+    }
+  }
+  
+  // Bonus "expand" variant
+  .v-input--expand .v-input__slot {
+    // justify-content: space-between;
+    .v-label {
+        display: block;
+        flex: 1;
+        color: #21455E;
+        font-size: 0.75em;
+        font-weight: 500;
+    }
+  }
+
+  //live preview
+  .live_preview {
+    font-size: 14px;
+  }
+
+  .navbar_link_active.v-btn--outlined{
+      border: 3px solid #CCCCCC;
+      border-color: #0DABDB transparent transparent transparent;
+      border-radius: 3px;
+  }
+
+  .company_name {
+    @import url("https://fonts.googleapis.com/css?family=Helvetica:400,500,700,900&display=swap");
+    font-family: "Helvetica" !important;
+  }
+
+  .welcome_sheet {
+    border: 1px dashed #A3BAC6 !important;
+    border-radius: 38px !important;
+    opacity: 1;
+  }
+
+   .v-list-item--link--active,{
+    background: #E2E5ED 0% 0% no-repeat padding-box !important;
+    border: 1px solid #0DABD838 !important;
+    border-radius: 10px !important;
+    opacity: 1;
+  }
+
+
+
+  @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,700,900&display=swap");
+  $body-font-family: "Poppins" !important;
+  
