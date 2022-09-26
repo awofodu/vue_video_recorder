@@ -52,7 +52,7 @@
     <v-divider></v-divider>
 
       <v-navigation-drawer clipped permanent app class="secondary"  v-if="$route.name!='LiveRecord'">
-        <v-list dense>
+        <v-list dense rounded>
             <v-list-item v-for="link in links" :key="link.text" :to="link.route" v-model="selected">
                 <v-list-item-icon class="ml-5 mr-4">
                   <v-img :src="'/images/svg/'+link.icon+'.svg'" width="25"></v-img>
