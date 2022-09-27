@@ -63,7 +63,7 @@
 
               <div>
                 <v-avatar rounded="lg" height="30" width="30">
-                  <img src="https://randomuser.me/api/portraits/women/81.jpg">
+                  <img src="/images/avatar.png">
                 </v-avatar>
               </div>
               <div class="mr-6">
