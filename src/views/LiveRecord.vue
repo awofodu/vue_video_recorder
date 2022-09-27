@@ -17,7 +17,6 @@
                   rounded
                   class="mx-auto live_prev_bg"
                   height="350"
-                  width="700"
                 ></v-sheet>
             </v-col>
           <v-col cols="2"></v-col>

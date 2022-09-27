@@ -7,16 +7,16 @@
       >
           <v-container class="ml-5">
             <v-row align="center">
-              <router-link to="/">
-                <v-avatar color="adilo_bg" rounded="lg" height="30" class="mr-2">
-                <v-img src="/images/svg/swarm.svg" max-width="20" max-height="20"></v-img>
+              <router-link to="/" class="navbar_logo_link">
+                <v-avatar rounded="lg" height="30" class="mr-2">
+                <v-img src="/images/logo.png" max-width="33"></v-img>
                 </v-avatar>
-                <v-appbar-title class="grey--text pr-3 font-weight-bold company_name">Adilo</v-appbar-title>
+                <v-appbar-title class="pr-3 company_name">Adilo</v-appbar-title>
               </router-link>
 
-              <v-spacer class="mr-15"></v-spacer>
+              <v-spacer class="mr-15 d-none d-sm-flex"></v-spacer>
 
-              <div>
+              <div class="d-none d-sm-flex">
                   <v-btn plain small class="text-none mr-3 appbar_menur_color--text">Projects</v-btn>
                   <!--<v-btn outlined small class="text-none toolbar_active--text mr-3 font-weight-bold navbar_link_active">
                   Tools & App</v-btn> -->
@@ -55,11 +55,11 @@
 
               <v-spacer></v-spacer>
               
-              <div>
+              <div class="d-none d-sm-flex">
                   <v-btn plain small class="text-none toolbar_active--text mr-3 font-weight-bold">Help</v-btn>
               </div>
 
-              <v-divider inset vertical class="mr-3 divider_color"></v-divider>
+              <v-divider inset vertical class="mr-3 divider_color d-none d-sm-flex"></v-divider>
 
               <div>
                 <v-avatar rounded="lg" height="30" width="30">

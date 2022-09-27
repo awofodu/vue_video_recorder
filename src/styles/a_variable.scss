@@ -39,9 +39,15 @@
       border-radius: 3px;
   }
 
+  @font-face {
+    font-family: HelveticaFont;
+    src:url("/fonts/Helvetica Bold.ttf");
+}
+
   .company_name {
-    @import url("https://fonts.googleapis.com/css?family=Helvetica:400,500,700,900&display=swap");
-    font-family: "Helvetica" !important;
+    font: normal normal bold 20px Helvetica;
+    color: #21455E;
+    opacity: 1;
   }
 
   .welcome_sheet {
@@ -71,6 +77,21 @@
   {
     border-bottom: none !important;
     padding-bottom: 20px;
+  }
+
+  .v-toolbar__content
+  {
+    border-bottom: 1px solid #E2E5ED;
+  }
+
+  a.navbar_logo_link
+  {
+    text-decoration: none !important;
+  }
+
+  .v-list--rounded .v-list-item, .v-list--rounded .v-list-item::before, .v-list--rounded .v-list-item > .v-ripple__container
+  {
+    border-radius: 10px !important;
   }
 
 
