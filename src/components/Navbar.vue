@@ -9,7 +9,7 @@
             <v-row align="center">
               <router-link to="/">
                 <v-avatar color="adilo_bg" rounded="lg" height="30" class="mr-2">
-                <v-img src="/images/swarm.svg" max-width="20" max-height="20"></v-img>
+                <v-img src="/images/svg/swarm.svg" max-width="20" max-height="20"></v-img>
                 </v-avatar>
                 <v-appbar-title class="grey--text pr-3 font-weight-bold company_name">Adilo</v-appbar-title>
               </router-link>
