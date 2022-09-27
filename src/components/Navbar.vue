@@ -63,7 +63,7 @@
 
               <div>
                 <v-avatar rounded="lg" height="30" width="30">
-                  <img src="/images/avatar.png">
+                  <img src="/images/avatar.jpg">
                 </v-avatar>
               </div>
               <div class="mr-6">
