@@ -7,23 +7,50 @@
       >
           <v-container class="ml-5">
             <v-row align="center">
-              <v-avatar color="adilo_bg" rounded="lg" height="30" class="mr-2">
-              <v-img src="/images/swarm.svg" max-width="20" max-height="20"></v-img>
-              </v-avatar>
-              <v-appbar-title class="grey--text pr-3 font-weight-bold company_name">Adilo</v-appbar-title>
-
-              <v-btn text :key="item.id" v-for="item in quickLinks" v-text="item.text"></v-btn>
+              <router-link to="/">
+                <v-avatar color="adilo_bg" rounded="lg" height="30" class="mr-2">
+                <v-img src="/images/swarm.svg" max-width="20" max-height="20"></v-img>
+                </v-avatar>
+                <v-appbar-title class="grey--text pr-3 font-weight-bold company_name">Adilo</v-appbar-title>
+              </router-link>
 
               <v-spacer class="mr-15"></v-spacer>
 
               <div>
                   <v-btn plain small class="text-none mr-3 appbar_menur_color--text">Projects</v-btn>
-                  <v-btn outlined small class="text-none toolbar_active--text mr-3 font-weight-bold navbar_link_active">
-                  Tools & App</v-btn>
+                  <!--<v-btn outlined small class="text-none toolbar_active--text mr-3 font-weight-bold navbar_link_active">
+                  Tools & App</v-btn> -->
+                  <v-menu transition="slide-y-transition">
+                    <template v-slot:activator="{ on, attrs }">
+                      <v-btn
+                        outlined small
+                        class="text-none toolbar_active--text mr-3 font-weight-bold navbar_link_active mr-3"
+                        v-bind="attrs"
+                        v-on="on"
+                      >
+                        Tools & App
+                      </v-btn>
+                    </template>
+                    <v-list>
+                      <v-list-item link>
+                        <v-list-item-title><h6 class="font-weight-light">Snapbyte Recorder</h6></v-list-item-title>
+                      </v-list-item>
+                      <v-divider/>
+                      <v-list-item link>
+                        <v-list-item-title><h6 class="font-weight-light">Audio Bounce</h6></v-list-item-title>
+                      </v-list-item>
+                      <v-divider/>
+                      <v-list-item link>
+                        <v-list-item-title><h6 class="font-weight-light">Sugar Voice</h6></v-list-item-title>
+                      </v-list-item>
+                    </v-list>
+                  </v-menu>
                   <v-btn plain small class="text-none mr-3 appbar_menur_color--text">Channels</v-btn>
                   <v-btn plain small class="text-none mr-3 appbar_menur_color--text">Contacts</v-btn>
                   <v-btn plain small class="text-none mr-3 appbar_menur_color--text">Analytics</v-btn>
                   <v-btn plain small class="text-none mr-3 appbar_menur_color--text">Settings</v-btn>
+                  
+
               </div>
 
               <v-spacer></v-spacer>

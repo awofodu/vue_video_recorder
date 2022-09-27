@@ -1,37 +1,37 @@
 <template>
-  <v-container>
+  <v-container fluid>
   <v-row>
     <v-col cols="1"></v-col>
     <v-col cols="10">
-      <v-container>
-        <v-row class="pt-4 grey--text">
-          <v-col cols="12"><h5 class="font-weight-medium">Snapbyte > My Recordings</h5></v-col>
+      <v-container fluid>
+        <v-row class="grey--text">
+          <v-col cols="12"><h5 class="font-weight-light">Snapbyte &emsp; <span class="text-h6">&gt;</span> &emsp; My Recordings</h5></v-col>
         </v-row>
         <v-row>
-          <v-col cols="4">
+          <v-col cols="3">
                 <div>
-                  <span class="pr-3">My Recordings</span> 
-                  <span class="text-h6 grey--text">25</span>
+                  <span class="mr-3">My Recordings</span> 
+                  <span class="text-h6 grey--text font-weight-medium">25</span>
                 </div>
               </v-col>
 
-              <v-col cols="8">
-                <v-btn class="text-none grey--text mr-2" color="primary" outlined depressed small rounded>
+              <v-col cols="9">
+                <v-btn class="text-none grey--text mr-2" color="primary" outlined depressed rounded>
                     <v-icon left dark> mdi-swap-vertical </v-icon> 
                     <h5 class="font-weight-light">By Date</h5>
                   </v-btn>
 
-                  <v-btn class="text-none grey--text mr-2" color="white" outlined depressed small rounded>
+                  <v-btn class="text-none grey--text mr-2" color="white" outlined depressed rounded>
                     <v-icon left dark> mdi-filter-outline </v-icon> 
-                    <h5 class="font-weight-light">Add Filter</h5>
+                    <h5 class="font-weight-light">Add Filter <span class="arrow_down">></span></h5>
                   </v-btn>
 
-                  <v-btn class="text-none white--text mr-2" color="blue_button" depressed small rounded>
+                  <v-btn class="text-none white--text mr-2" color="blue_button" depressed rounded>
                     <v-icon left dark> mdi-video-outline </v-icon> 
                     <h5 class="font-weight-light">New Request</h5>
                   </v-btn>
                   
-                  <v-btn class="text-none white--text" color="red_button" depressed small rounded 
+                  <v-btn class="text-none white--text" color="red_button" depressed rounded 
                   @click.stop="dialog = true">
                     <v-icon left dark color="black"> mdi-record-rec </v-icon> 
                     <h5 class="font-weight-light">Start Recording</h5>
@@ -47,8 +47,11 @@
             max-width="400"
           >
             <v-card>
-              <v-card-title class="text-h6">
-                <h5>New Recording</h5> <v-spacer/> <v-btn plain @click="dialog = false">&times;</v-btn>
+              <v-card-title>
+                <h5>New Recording</h5> <v-spacer/> 
+                <v-btn plain @click="dialog = false">
+                  <span class="font-weight-light text-h4 black--text">&times;</span>
+                </v-btn>
               </v-card-title>
 
               <v-divider/>
@@ -62,14 +65,6 @@
                     label="Select a project"
                   ></v-select>
                 </div>
-                    <v-btn absolute right fixed>
-                      <v-checkbox class="pt-3"
-                      v-model="$vuetify.theme.dark"
-                      color="purple"
-                      off-icon="mdi-theme-light-dark"
-                      on-icon="mdi-theme-light-dark"
-                      ></v-checkbox>
-                    </v-btn>
 
                 <div>
                     <v-switch dense class="v-input--reverse v-input--expand mt-1"
@@ -89,7 +84,7 @@
                 <div align="center" class="pt-3">
                   <router-link to="/live-record">
                     <v-btn class="text-none white--text" bottom color="blue_button" depressed rounded
-                    @click="dialog = false">
+                    @click="dialog = false" width="250">
                       <h5 class="font-weight-light">Start Recording</h5>
                     </v-btn>
                     </router-link>
@@ -106,20 +101,20 @@
           <v-simple-table>
               <thead>
                 <tr>
-                  <th class="grey--text">
-                    Recordings
+                  <th class="toolbar_active--text">
+                    <h3 class="font-weight-medium">Recordings</h3>
                   </th>
-                  <th class="grey--text">
-                    Title
+                  <th class="toolbar_active--text">
+                    <h3 class="font-weight-medium">Title</h3>
                   </th>
-                  <th class="grey--text">
-                    Views
+                  <th class="toolbar_active--text">
+                    <h3 class="font-weight-medium">Views</h3>
                   </th>
-                  <th class="grey--text">
-                    Size
+                  <th class="toolbar_active--text">
+                    <h3 class="font-weight-medium">Size</h3>
                   </th>
-                  <th class="grey--text" colspan="2">
-                    Last Modified
+                  <th class="toolbar_active--text" colspan="2">
+                    <h3 class="font-weight-medium">Last Modified</h3>
                   </th>
                 </tr>
               </thead>
@@ -134,15 +129,13 @@
                         contain
                       ></v-img>
                   </td>
-                  <td class="pr-12">
-                    <div class="pr-12">
-                      <h4 class="font-weight-medium text-sm-left">
+                  <td>
+                      <h4 class="font-weight-light toolbar_active--text text-sm-left">
                       {{recording.title}}
                       </h4>
                     <h5 class="table_content--text text-sm-left font-weight-light">
                       {{recording.subtitle}}
                     </h5>
-                    </div>
                   </td>
                   
                   <td>{{recording.views}}</td>
@@ -180,7 +173,7 @@ export default {
         dialog: false,
         recordings: [
           {
-            thumbnail: '/video.jpg',
+            thumbnail: '/images/thumbnail.jpg',
             title: 'Getting it rigt the first time',
             subtitle: 'The video description is shown here if the user has added it.',
             views: '324',
@@ -188,7 +181,7 @@ export default {
             last_modified: '3 months ago',
           },
           {
-            thumbnail: '/video.jpg',
+            thumbnail: '/images/thumbnail1.jpg',
             title: 'Getting it rigt the first time',
             subtitle: 'The video description is shown here if the user has added it.',
             views: '324',
@@ -196,7 +189,7 @@ export default {
             last_modified: '3 months ago',
           },
           {
-            thumbnail: '/video.jpg',
+            thumbnail: '/images/thumbnail2.jpg',
             title: 'Getting it rigt the first time',
             subtitle: 'The video description is shown here if the user has added it.',
             views: '324',
@@ -204,7 +197,7 @@ export default {
             last_modified: '3 months ago',
           },
           {
-            thumbnail: '/video.jpg',
+            thumbnail: '/images/thumbnail3.jpg',
             title: 'Getting it rigt the first time',
             subtitle: 'The video description is shown here if the user has added it.',
             views: '324',
@@ -212,7 +205,7 @@ export default {
             last_modified: '3 months ago',
           },
           {
-            thumbnail: '/video.jpg',
+            thumbnail: '/images/thumbnail4.jpg',
             title: 'Getting it rigt the first time',
             subtitle: 'The video description is shown here if the user has added it.',
             views: '324',

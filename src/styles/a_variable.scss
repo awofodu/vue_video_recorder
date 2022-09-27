@@ -45,16 +45,32 @@
   }
 
   .welcome_sheet {
-    border: 1px dashed #A3BAC6 !important;
+    border: 2px dashed #A3BAC6 !important;
     border-radius: 38px !important;
     opacity: 1;
   }
 
-   .v-list-item--link--active,{
+   .v-list-item--link--active{
     background: #E2E5ED 0% 0% no-repeat padding-box !important;
     border: 1px solid #0DABD838 !important;
     border-radius: 10px !important;
     opacity: 1;
+  }
+
+  .arrow_down {
+    display: inline-block;
+    transform: rotate(90deg);
+  }
+  .theme--light.v-data-table > .v-data-table__wrapper > table > tbody > tr:not(:last-child) > td:not(.v-data-table__mobile-row)
+  {
+    border-bottom: none !important;
+    padding-bottom: 20px;
+  }
+
+  .theme--light.v-data-table > .v-data-table__wrapper > table > thead > tr:last-child > th
+  {
+    border-bottom: none !important;
+    padding-bottom: 20px;
   }
 
 
