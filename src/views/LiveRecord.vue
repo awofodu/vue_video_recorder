@@ -26,12 +26,12 @@
           <v-col cols="2"></v-col>
           </v-row>
 
-          <div align="center" class="pt-10">
+          <!-- <div align="center" class="pt-10">
             <v-btn class="text-none white--text" bottom color="blue_button" depressed rounded
             @click="dialog = false">
                 <h5 class="font-weight-light">Start recording</h5>
             </v-btn>
-          </div>
+          </div> -->
         </v-container>
     </v-content>
 </template>
@@ -49,6 +49,7 @@ export default {
       components: {
           MulticorderUI
         },
+        
       computed:{
       theme(){
         return 'dark'

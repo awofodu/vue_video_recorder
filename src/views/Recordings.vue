@@ -58,9 +58,9 @@
 
               <v-card-text>
                 <div class="pt-5">
-                <v-alert dense outlined type="warning" border="left" >
+                <!-- <v-alert dense outlined type="warning" border="left" >
                   Select a minimum of two options...
-                </v-alert>
+                </v-alert> -->
                   <span class="black--text">Save the record in</span>
                   <v-select dense
                     :items="items" class="pt-3"

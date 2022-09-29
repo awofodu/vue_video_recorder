@@ -84,7 +84,7 @@
                 <div align="center" class="pt-3">
                   <router-link to="/live-record">
                     <v-btn class="text-none white--text" bottom color="blue_button" depressed rounded
-                    @click="dialog = false" width="250">
+                    @click="startRecord()" width="250">
                       <h5 class="font-weight-light">Start Recording</h5>
                     </v-btn>
                     </router-link>
@@ -241,11 +241,40 @@
 export default {
     data () {
       return {
-        switch1: true,
-        switch2: true,
-        switch3: false,
+        switch1: this.$session.get('record_option') == 'screen' ? true : false,
+        switch2: this.$session.get('record_option') == 'camera' ? true : false,
+        switch3: true,
+        record_option: '', //default record option
         dialog: false,
+        items: ['Tourism', 'Entertainment'],
       }
     },
+
+    methods: {
+      startRecord() {
+        this.$router.push('/live-record');
+
+      }
+    },
+
+    watch: {
+      switch1(s1Value){
+        //called whenever switch1 changes
+        if(s1Value == true) {
+          this.switch2 = false;
+          this.record_option = 'screen';
+          this.$session.set('record_option', this.record_option);
+          // this.$session.destroy()
+        }
+      },
+      switch2(s2Value){
+        //called whenever switch1 changes
+        if(s2Value == true) {
+          this.switch1 = false;
+          this.record_option = 'camera';
+          this.$session.set('record_option', this.record_option);
+        }
+      }
+    }
   }
 </script>
