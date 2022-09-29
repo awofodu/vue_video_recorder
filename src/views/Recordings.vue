@@ -232,8 +232,8 @@ export default {
         if(s1Value == true) {
           this.switch2 = false;
           this.record_option = 'screen';
-          // this.$session.set('record_option', this.record_option);
-          this.$session.destroy()
+          this.$session.set('record_option', this.record_option);
+          // this.$session.destroy()
         }
       },
       switch2(s2Value){
