@@ -13,7 +13,6 @@ export default new Vuetify({
               accent: '#8c9eff',
               error: '#b71c1c',
               def_text: "#21455E",
-              appbar_background: "red",
               appbar_menur_color: "#707070",
               toolbar_active: "#21455E",
               grey: "#63768E",

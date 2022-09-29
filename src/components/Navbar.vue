@@ -11,7 +11,7 @@
                 <v-avatar rounded="lg" height="30" class="mr-2">
                 <v-img src="/images/logo.png" max-width="33"></v-img>
                 </v-avatar>
-                <v-appbar-title class="pr-3 company_name">Adilo</v-appbar-title>
+                <v-app-bar-title class="pr-3 company_name">Adilo</v-app-bar-title>
               </router-link>
 
               <v-spacer class="mr-15 d-none d-sm-flex"></v-spacer>

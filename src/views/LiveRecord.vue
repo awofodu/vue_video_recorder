@@ -13,11 +13,15 @@
                 </v-icon>
                 Live Preview</span>
                 <p></p>
-                <v-sheet
+                <!--<v-sheet
                   rounded
                   class="mx-auto live_prev_bg"
                   height="350"
-                ></v-sheet>
+                ></v-sheet> -->
+
+                <MulticorderUI height="350"
+                  :videoTypes="[record_option]"
+                />
             </v-col>
           <v-col cols="2"></v-col>
           </v-row>
@@ -33,8 +37,18 @@
 </template>
 
 <script>
+import  MulticorderUI  from 'multicorder/vuetify_ui/src/components/MulticorderUI.vue';
 
 export default {
+      data() {
+        return {
+          record_option: this.$session.get('record_option'),
+        }
+      },
+
+      components: {
+          MulticorderUI
+        },
       computed:{
       theme(){
         return 'dark'
