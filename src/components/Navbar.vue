@@ -8,10 +8,12 @@
           <v-container class="ml-5">
             <v-row align="center">
               <router-link to="/" class="navbar_logo_link">
-                <v-avatar rounded="lg" height="30" class="mr-2">
-                <v-img src="/images/logo.png" max-width="33"></v-img>
-                </v-avatar>
-                <v-app-bar-title class="pr-3 company_name">Adilo</v-app-bar-title>
+                <v-app-bar-title class="pr-3 company_name">
+                  <v-avatar rounded="lg" height="30" class="mr-2">
+                    <v-img src="/images/logo.png" max-width="33"></v-img>
+                  </v-avatar>
+                    Adilo
+                </v-app-bar-title>
               </router-link>
 
               <v-spacer class="mr-15 d-none d-sm-flex"></v-spacer>
