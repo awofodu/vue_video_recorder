@@ -16,6 +16,7 @@
     "node-sass": "^7.0.3",
     "serve-static": "^1.15.0",
     "vue": "^2.6.11",
+    "vue-meta": "^2.4.0",
     "vue-router": "^3.2.0",
     "vue-session": "^1.0.0",
     "vuetify": "^2.6.0"
