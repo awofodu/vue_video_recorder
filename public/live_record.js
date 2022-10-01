@@ -83,15 +83,15 @@ if(btn){
 }
 
 
-let camera_button = document.querySelector(".start-camera");
-let camera_video = document.querySelector("#video");
-let start_button = document.querySelector(".start-cam-record");
-let stop_button = document.querySelector(".stop-cam-record");
-let download_link = document.querySelector("#download-video");
+var camera_button = document.querySelector(".start-camera");
+var camera_video = document.querySelector("#video");
+var start_button = document.querySelector(".start-cam-record");
+var stop_button = document.querySelector(".stop-cam-record");
+var download_link = document.querySelector("#download-video");
 
-let camera_stream = null;
-let media_recorder = null;
-let blobs_recorded = [];
+var camera_stream = null;
+var media_recorder = null;
+var blobs_recorded = [];
 
 if(camera_button){
     camera_button.addEventListener('click', async function() {
